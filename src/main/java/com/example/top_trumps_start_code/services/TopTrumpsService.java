@@ -11,7 +11,12 @@ public class TopTrumpsService {
 
     public String checkWinner(Card card1, Card card2){
         Card winner;
-        if(card1.getRank().getValue() >= card2.getRank().getValue()){
+
+        if(card1.getRank().getValue() == card2.getRank().getValue()) {
+            return "It's a draw!";
+        }
+
+        if(card1.getRank().getValue() > card2.getRank().getValue()){
             winner = card1;
         } else {
             winner = card2;
