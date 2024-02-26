@@ -24,4 +24,15 @@ public class TopTrumpsController {
         String reply = topTrumpsService.checkWinner(cards.get(0), cards.get(1));
         return new ResponseEntity<>(reply, HttpStatus.OK);
     }
+
+/*    EXTENSION
+        - instantiate new deck at start of game
+        - check cards are in deck before they're played
+        - remove cards from deck after they've been played
+
+        @PostMapping
+        public ResponseEntity<String> startGame() {
+            Deck deck = new Deck();
+      }
+ */
 }
