@@ -12,6 +12,12 @@ public class Card {
 
     public Card(){};
 
+    public String toString() {
+        return this.rank + " of " + this.suit;
+    }
+
+//    GETTERS & SETTERS
+
     public Rank getRank() {
         return rank;
     }

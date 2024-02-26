@@ -24,10 +24,18 @@ public class Deck {
 //    - Check for cards
 //    - Remove card
 
-    public boolean isInDeck(Card card) {
-        return this.cards.contains(card);
+    public boolean isInDeck(Card inputCard) {
+        for(Card card : this.cards) {
+            if(card.getRank() == inputCard.getRank() &&
+               card.getSuit() == inputCard.getSuit()) {
+                return true;
+            }
+        }
+        return false;
     }
 
+//    Note: doesn't work as intended because cards referenced in games are different objects to cards in deck
+//    ArrayList.
     public void removeCard(Card card){
         this.cards.remove(card);
     }
