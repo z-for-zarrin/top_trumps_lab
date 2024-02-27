@@ -1,7 +1,6 @@
 package com.example.top_trumps_start_code.controllers;
 
 import com.example.top_trumps_start_code.models.Card;
-import com.example.top_trumps_start_code.models.Deck;
 import com.example.top_trumps_start_code.services.TopTrumpsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
