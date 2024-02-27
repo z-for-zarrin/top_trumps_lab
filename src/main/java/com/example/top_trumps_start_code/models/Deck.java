@@ -36,8 +36,10 @@ public class Deck {
 
 //    Note: doesn't work as intended because cards referenced in games are different objects to cards in deck
 //    ArrayList.
-    public void removeCard(Card card){
-        this.cards.remove(card);
+    public void removeCard(Card inputCard){
+        this.cards.removeIf(card -> card.getRank() == inputCard.getRank() &&
+                                    card.getSuit() == inputCard.getSuit());
+
     }
 
 //    GETTERS & SETTERS

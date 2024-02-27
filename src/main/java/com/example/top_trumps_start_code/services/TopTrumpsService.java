@@ -29,6 +29,7 @@ public class TopTrumpsService {
         if(this.deck.isInDeck(card2)) {
             this.deck.removeCard(card2);
         } else {
+            this.deck.getCards().add(card1);
             return "Card 2 not in deck!";
         }
 
